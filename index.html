@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RMP Ventures | San Diego Real Estate, Management &amp; Capital</title>
+<meta name="description" content="RMP Ventures is a family-owned San Diego real estate company: acquisitions, hands-on property management, consulting, and private debt and equity.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RMP Ventures">
+<meta property="og:description" content="Family-owned San Diego real estate: acquisitions, property management, consulting, and private debt and equity.">
+<meta property="og:url" content="https://rmpventures.com/">
+<meta property="og:image" content="https://rmpventures.com/brand/rmp-lockup.png">
+<link rel="icon" type="image/png" href="brand/rmp-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Mission Control palette */
+:root{
+  --bg:#0f1115; --panel:#14171d; --card:#1d2129; --line:#2c313b; --fg:#e6e8ee; --mute:#9aa3b4;
+  --blue:#6aa3ff; --green:#3ecf8e; --amber:#ffb547; --gold:#F1B82D;
+  --photo-opacity:.42;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f6f7f9; --panel:#ffffff; --card:#ffffff; --line:#e3e6ec; --fg:#1d2433; --mute:#5f6879;
+    --blue:#1d5fd1; --green:#1f9d55; --amber:#b26a00; --photo-opacity:.3;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+img{max-width:100%;height:auto}
+a{color:var(--blue)}
+.wrap{max-width:1140px;margin:0 auto;padding-left:20px;padding-right:20px}
+.label{font-family:"JetBrains Mono",Consolas,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.label b{color:var(--blue);font-weight:600}
+h1,h2,h3{line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(38px,6vw,66px);font-weight:700;margin:.3em 0 .35em;max-width:15ch}
+h1 .hl{background:linear-gradient(90deg,var(--blue),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(26px,3.6vw,38px);font-weight:700;margin:.3em 0 .45em;max-width:26ch}
+.lead{font-size:19px;color:var(--mute);max-width:54ch}
+
+/* The Lion Rock image (Mission Control home), fixed behind the whole page, soft edges */
+body::before{content:"";position:fixed;top:0;right:0;height:100vh;aspect-ratio:3/4;z-index:-1;pointer-events:none;
+  background:url(img/lion-rock-bg.jpg) center / cover no-repeat;opacity:var(--photo-opacity);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 14%,#000 82%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 14%,#000 82%,transparent 100%);
+  mask-composite:intersect}
+
+/* glass surfaces so the image reads through */
+.glass{background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid var(--line)}
+
+/* top bar */
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
+.brand img{height:42px !important;width:auto}
+.brand b{font-family:Cinzel,serif;font-weight:700;font-size:20px;letter-spacing:.12em}
+.brand b span{color:var(--gold)}
+.top-right{display:flex;align-items:center;gap:20px}
+nav a{margin-left:18px;color:var(--mute);text-decoration:none;font-weight:500;font-size:14px}
+nav a:hover{color:var(--fg)}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:5px 12px;font-family:"JetBrains Mono",Consolas,monospace;font-size:12px;color:var(--mute)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 70%,transparent)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+/* hero */
+.hero{min-height:calc(88vh - 66px);display:flex;flex-direction:column;justify-content:center;padding-top:56px;padding-bottom:56px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;background:var(--blue);color:#0b0d11;padding:13px 24px;border-radius:10px;text-decoration:none;font-weight:600;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:color-mix(in srgb,var(--card) 70%,transparent);color:var(--fg);border:1px solid var(--line)}
+.proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.proof span{font-family:"JetBrains Mono",Consolas,monospace;font-size:12px;color:var(--mute);border-radius:8px;padding:6px 10px}
+.proof b{color:var(--green);font-weight:500}
+
+/* ticker */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--panel) 85%,transparent);overflow:hidden;padding:12px 0}
+.ticker .row{display:flex;gap:36px;width:max-content;white-space:nowrap;animation:slide 34s linear infinite;font-family:"JetBrains Mono",Consolas,monospace;font-size:13px;color:var(--mute)}
+.ticker .row span b{color:var(--green);font-weight:500;margin-right:8px}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.dot,.ticker .row{animation:none}}
+
+section{padding:80px 0}
+
+/* tiles */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.grid.four{grid-template-columns:repeat(4,1fr)}
+.tile{border-radius:14px;padding:22px;transition:border-color .2s, transform .2s}
+.tile:hover{border-color:var(--blue);transform:translateY(-3px)}
+.tile .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.tile .ico{font-size:22px}
+.tag{font-family:"JetBrains Mono",Consolas,monospace;font-size:11px;padding:3px 8px;border-radius:6px;border:1px solid var(--line);color:var(--mute)}
+.tag.g{color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,var(--line))}
+.tag.b{color:var(--blue);border-color:color-mix(in srgb,var(--blue) 40%,var(--line))}
+.tag.a{color:var(--amber);border-color:color-mix(in srgb,var(--amber) 40%,var(--line))}
+.tile h3{margin:0 0 6px;font-size:19px}
+.tile p{margin:0;color:var(--mute);font-size:15px}
+.tile .go{display:inline-block;margin-top:14px;font-weight:600;text-decoration:none;font-size:15px}
+.step{font-family:"JetBrains Mono",Consolas,monospace;color:var(--blue);font-size:13px;margin-bottom:8px}
+
+/* about */
+.about{display:grid;grid-template-columns:380px 1fr;gap:48px;align-items:start}
+.portrait{border-radius:18px;padding:12px}
+.portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:12px}
+.portrait .cap{padding:12px 4px 2px;font-family:"JetBrains Mono",Consolas,monospace;font-size:12px;color:var(--mute)}
+.role{font-family:"JetBrains Mono",Consolas,monospace;color:var(--green);font-size:14px;margin-top:-6px}
+.about p{color:var(--mute)}
+.about p.lead{color:var(--fg)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.stat{border-radius:12px;padding:14px 16px}
+.stat .k{font-family:"JetBrains Mono",Consolas,monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.stat .v{font-size:18px;font-weight:600;margin-top:4px}
+
+/* contact */
+.cta{border-radius:20px;padding:36px}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.contact .tile .v{font-size:18px;font-weight:600;margin-top:6px}
+.contact a{text-decoration:none;color:var(--fg)}
+.contact a:hover{color:var(--blue)}
+
+footer{padding:26px 0 40px;color:var(--mute);font-size:12px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;gap:16px;align-items:center}
+footer img{height:44px !important;width:auto}
+
+@media (max-width:880px){
+  nav{display:none}
+  body::before{left:0;aspect-ratio:auto;width:100%;opacity:calc(var(--photo-opacity) * .6);
+    -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 20%,#000 80%,transparent 100%);
+    mask-image:linear-gradient(180deg,transparent 0%,#000 20%,#000 80%,transparent 100%)}
+  .hero{min-height:auto;padding-top:56px}
+  .grid,.grid.four,.contact,.stats{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;gap:32px}
+  .portrait{max-width:380px}
+  .cta{padding:24px}
+}
+@media (min-width:881px) and (max-width:1100px){.grid.four{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#"><img src="brand/rmp-icon.png" alt="" width="460" height="620"><b>RMP <span>VENTURES</span></b></a>
+    <div class="top-right">
+      <nav><a href="#services">Services</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <span class="pill glass"><span class="dot"></span>accepting inquiries</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="label"><b>&gt;</b> San Diego County · family owned · est. 2017</div>
+    <h1>Real estate with <span class="hl">heart</span>, run like a well-oiled machine.</h1>
+    <p class="lead">We buy, improve and personally manage homes across San Diego County, and partner with owners and investors who want the same care for theirs.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:admin@rmpventures.com?subject=Inquiry%20for%20RMP%20Ventures">Start a conversation →</a>
+      <a class="btn ghost" href="#services">Explore services</a>
+    </div>
+    <div class="proof">
+      <span class="glass"><b>●</b> owner-operated</span>
+      <span class="glass"><b>●</b> one point of contact</span>
+      <span class="glass"><b>●</b> long-term hold</span>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="row">
+      <span><b>●</b>real estate</span><span><b>●</b>acquisitions</span><span><b>●</b>property management</span><span><b>●</b>consulting</span><span><b>●</b>private debt &amp; equity</span><span><b>●</b>residents first</span>
+      <span><b>●</b>real estate</span><span><b>●</b>acquisitions</span><span><b>●</b>property management</span><span><b>●</b>consulting</span><span><b>●</b>private debt &amp; equity</span><span><b>●</b>residents first</span>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="label"><b>01</b> / services</div>
+      <h2>From the first walk-through to the hundredth rent check</h2>
+      <div class="grid">
+        <div class="tile glass"><div class="head"><span class="ico">🏡</span><span class="tag g">own · hold</span></div><h3>Real estate</h3><p>We own and hold residential property in San Diego County for the long run: single-family homes and small multifamily buildings.</p></div>
+        <div class="tile glass"><div class="head"><span class="ico">🔑</span><span class="tag b">source · close</span></div><h3>Acquisitions</h3><p>We source, underwrite and close on properties where good management and smart improvements can add lasting value.</p></div>
+        <div class="tile glass"><div class="head"><span class="ico">🛠️</span><span class="tag g">hands-on</span></div><h3>Property management</h3><p>Leasing, maintenance, renovations and resident care, handled with trusted local vendors and one point of contact.</p></div>
+        <div class="tile glass"><div class="head"><span class="ico">🧭</span><span class="tag b">advise</span></div><h3>Consulting</h3><p>Practical guidance for owners and investors on buying, operating and improving residential rentals.</p></div>
+        <div class="tile glass"><div class="head"><span class="ico">🤝</span><span class="tag a">by invitation</span></div><h3>Private debt &amp; equity</h3><p>We partner with a small circle of investors on real estate financing and co-investment, structured deal by deal.</p></div>
+        <div class="tile glass"><div class="head"><span class="ico">☕</span><span class="tag g">always on</span></div><h3>The human part</h3><p>We pick up the phone, we show up in person, and we know our residents by name.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="label"><b>02</b> / approach</div>
+      <h2>Four rules we run every property by</h2>
+      <div class="grid four">
+        <div class="tile glass"><div class="step">01 · buy right</div><h3>Patient buying</h3><p>We walk every property and run the numbers twice. A good deal starts at the purchase.</p></div>
+        <div class="tile glass"><div class="step">02 · fix it properly</div><h3>Real improvements</h3><p>Safe, durable upgrades done once and done right, not cosmetic patches.</p></div>
+        <div class="tile glass"><div class="step">03 · manage personally</div><h3>Owner on call</h3><p>The person who answers your call is the person who makes the decision.</p></div>
+        <div class="tile glass"><div class="step">04 · hold for the long run</div><h3>Built to last</h3><p>We are long-term owners, so our incentives line up with our residents and our partners.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="portrait glass">
+        <img src="img/milad-salem.jpg" alt="Milad Salem, owner of RMP Ventures" width="1000" height="1250">
+        <div class="cap">milad_salem · owner &amp; principal</div>
+      </div>
+      <div>
+        <div class="label"><b>03</b> / about me</div>
+        <h2>Hi, I'm Milad Salem.</h2>
+        <div class="role">Owner &amp; Principal, RMP Ventures</div>
+        <p class="lead">I built RMP Ventures on a simple idea: well-run homes make good investments and happy residents.</p>
+        <p>Over the years I have managed a growing portfolio of residential rentals across San Diego County, from single-family homes to multi-unit buildings. That means the whole job: marketing and leasing, turnovers and renovations, permits and utility upgrades, vendor relationships, and the late-night maintenance call.</p>
+        <p>On the acquisition side I help find, evaluate and close new properties, and plan the improvements that make them better places to live. Today RMP Ventures also works alongside fellow owners and investors through consulting and private debt and equity partnerships.</p>
+        <p>When I'm not walking a property, you'll find me with my family, usually planning the next project.</p>
+        <div class="stats">
+          <div class="stat glass"><div class="k">market</div><div class="v">San Diego</div></div>
+          <div class="stat glass"><div class="k">style</div><div class="v">Hands-on</div></div>
+          <div class="stat glass"><div class="k">horizon</div><div class="v">Long-term</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta glass">
+        <div class="label"><b>04</b> / contact</div>
+        <h2>Residents, owners and investors: let's talk.</h2>
+        <p class="lead">Looking for a home, a manager for yours, or a partner on your next deal? Reach out and you'll hear back from Milad directly.</p>
+        <div class="contact">
+          <div class="tile glass"><div class="label">email</div><div class="v"><a href="mailto:admin@rmpventures.com?subject=Inquiry%20for%20RMP%20Ventures">admin@rmpventures.com</a></div></div>
+          <div class="tile glass"><div class="label">phone</div><div class="v"><a href="tel:+18582242102">(858) 224-2102</a></div></div>
+          <div class="tile glass"><div class="label">mail</div><div class="v">PO Box 2365<br>Spring Valley, CA 91979</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="brand/rmp-icon.png" alt="" width="460" height="620">
+    <div>© <span id="y">2026</span> RMP Ventures · San Diego County, California.<br>
+    Information on this site is for general purposes only and is not an offer to sell, or a solicitation of an offer to buy, any security or investment.</div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
